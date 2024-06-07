@@ -1,0 +1,14 @@
+.Instalar paquetes de otra distribucion
+sudo nano /etc/apt/sources.list
+
+	cuando se abra el txt meter en este caso es de debian:
+	deb http://deb.debian.org/debian/ buster main
+	deb-src http://deb.debian.org/debian/ buster main
+
+	deb http://deb.debian.org/debian/ buster-updates main
+	deb-src http://deb.debian.org/debian/ buster-updates main
+
+
+.Carga las nuevas distrusiones o librerias(hace su refresh)
+sudo apt update
+

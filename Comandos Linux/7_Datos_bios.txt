@@ -1,0 +1,8 @@
+.Ver la version de bios que tengo
+cat /sys/class/dmi/id/bios_version
+
+.Datos de arranque ver los logs y errores
+dmesg
+
+.Ver problemas o log en especifico de un solo
+dmesg | grep "Nombre_que_quieres_ver"

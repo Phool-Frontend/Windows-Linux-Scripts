@@ -1,0 +1,2 @@
+.Lo descargas de la web y pones este codigo estando en la ruta donde esta el archivo
+sudo dpkg -i nombre_del_paquete.deb

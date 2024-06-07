@@ -1,0 +1,18 @@
+.Escaneo de redes disponibles con colorcitos.
+nmcli device wifi list
+
+.Conectarse a una red wifi con (nickRed)(password)
+nmcli device wifi connect NombreDeTuRed password TuContraseña
+
+.Reinicio del servicio de red (Es como un solucionador de problemas de windows)
+sudo systemctl restart networking
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: OTROS :::::::::::::::::::::::::::::::::::::::::::::::::::::..
+
+.Informacion detallada del dispositivo de red (mostrara el driver para wifi que uso)
+lspci -nnk | grep -A2 Network
+
+.Listado de las ip de mi servidor dns
+cat /etc/resolv.conf
+

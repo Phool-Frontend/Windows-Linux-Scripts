@@ -1,0 +1,5 @@
+.Para cuando se abra de la terminal y se necesite guardar
+Ctrl + o + enter
+
+.Para cuando se quiera salir luego de guardar
+Ctrl + x + enter

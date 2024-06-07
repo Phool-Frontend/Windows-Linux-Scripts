@@ -1,0 +1,2 @@
+.Con esto tengo todos los privilegios y no sera necesario poner sudo y la consola tendra sharingan se ara color rojo. 
+sudo -i

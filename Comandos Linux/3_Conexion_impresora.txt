@@ -1,0 +1,25 @@
+.Se instala los cups (sistema de impresion comun)
+sudo apt install cups
+
+.Con esto se enciende el cup
+sudo systemctl start cups
+
+.Mirar como esta el cups (si no sale nada de status esta apagado)(si sale status:"Scheduler is running" esta ok)
+sudo systemctl status cups
+
+.Abrimos en el navegador(si esta ok se mostrara una pagina)
+localhost:631
+
+.Nos vamos a admin para logearnos como admin
+admin y password se pone lo mismo que para iniciar sesion en kali
+
+.Agregando usuario al grupo de administradores de cups (como panel de administracion)(Aqui ya deberias poder ver printers,classes,job,etc)
+sudo usermod -aG lpadmin tu_usuario
+
+
+
+
+
+
+
+
