@@ -1,33 +1,36 @@
-<p align="center">
-  <a href="https://www.teggium.com" target="blank"><img width="200"
-  style="text-aling:left" src="https://www.kali.org/images/kali-logo.svg"  alt="Teggium_logo" /></a>
-</p>
+# Comandos en CMD de Windows
 
-<h2 align="center">Documentación | Phool Herrera Condezo</h2>
+Este repositorio es un conjunto de scripts y configuraciones destinado a facilitar el desarrollo de proyectos en Windows utilizando el símbolo del sistema (CMD). Incluye herramientas para abrir el editor de código Visual Studio Code, automatizar copias de seguridad con MongoDB, iniciar servidores Node.js y personalizar la apariencia del CMD con colores y nombres distintivos.
 
-## 🛠️ Instaladores
+## Funcionalidades 🛠️
 
-Herramientas requeridas para el desarrollo.
+### Editor de código - Visual Studio Code
+Con el script proporcionado, puedes abrir Visual Studio Code directamente desde el CMD. Esto facilita la edición de tus archivos de código y la gestión de tu proyecto.
 
-| Nombre                                                            | Command |
-| :---------------------------------------------------------------- | :------ |
-| [Visual Studio Code](https://code.visualstudio.com/)              | sudo apt install ./code_1.72.0-1664925838_arm64.deb       | |
-| [Git](https://git-scm.com/download/win)                           | sudo apt install git      |
-| [Postman](https://dl.pstmn.io/download/latest/win64)              | sudo apt install snap && sudo snap install postman
-|
+### Copias de seguridad con MongoDB
+Se incluyen scripts para automatizar el proceso de copias de seguridad de tu base de datos MongoDB. Esto te permite programar y ejecutar copias de seguridad regularmente sin necesidad de intervención manual.
 
-## 🛠️ Iniciar aplicación (Development)
+### Servidores Node.js
+Puedes iniciar servidores Node.js directamente desde el CMD utilizando los scripts proporcionados. Además, puedes asignar nombres significativos a cada CMD para distinguir los diferentes servidores que estás ejecutando.
 
-Se requiere tener en ejecución los siguientes proyectos:
+### Personalización del CMD
+El repositorio incluye configuraciones para personalizar la apariencia del CMD, incluyendo colores y nombres distintivos para cada ventana del símbolo del sistema.
 
-| Aplicación                                       | Url                                 |
-| :----------------------------------------------- | :---------------------------------- |
-| [Lista de Impresora](http://localhost:631) | `http://localhost:631` |
-| [Ataque pentesting](http://localhost:2054)        | `http://localhost:2054`             |
+## Uso 🚀
 
-Para iniciar la aplicación se necesita ejecutar alguno de estos comandos:
+Para aprovechar estas funcionalidades, sigue estos pasos:
 
-```bash
-python hola_mundo.py
-python3 hola_mundo.py
-```
+1. **Clonar el repositorio**: Utiliza el comando `git clone <URL_del_repositorio>` para obtener una copia local del repositorio en tu máquina.
+
+2. **Explorar el repositorio**: Navega hasta el directorio local utilizando el comando `cd <nombre_del_directorio>`.
+
+3. **Ejecutar scripts**: Utiliza los scripts proporcionados para abrir Visual Studio Code, realizar copias de seguridad con MongoDB, iniciar servidores Node.js y personalizar la apariencia del CMD.
+
+## Recursos adicionales ℹ️
+
+- [Documentación oficial de MongoDB](https://docs.mongodb.com/)
+- [Documentación oficial de Node.js](https://nodejs.org/en/docs/)
+- [Documentación oficial de Visual Studio Code](https://code.visualstudio.com/docs)
+- [Tutorial sobre personalización del CMD en Windows](https://www.windowscentral.com/how-customize-command-prompt-windows-10)
+
+¡Haz que tu desarrollo en Windows sea más eficiente y personalizado con este repositorio de comandos en CMD!
