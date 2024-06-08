@@ -1,0 +1,4 @@
+- Puedes configurar el color
+- Puedes configurar el tamaño por default y el actual en un cmd abierto solo dale anticlick
+- Se puede configurar sin necesidad de iniciar como administrador
+ 
