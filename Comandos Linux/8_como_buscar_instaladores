@@ -1,0 +1,3 @@
+.COn esto se puede buscar fabricantes:
+sudo apt search "nombre_fabricante"
+sudo apt search "modelo"

